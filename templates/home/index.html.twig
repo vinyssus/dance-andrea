@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %} {% block body %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    {% block stylesheets %}{% endblock %}
+    <link rel="stylesheet"  href="{{ asset('css/Home.css') }}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="*" class="logo">AZA-ANDREA</a>
+      <div class="nav-links">
+        <ul>
+          <li class="active"><a  href="$">A PROPOS DE MOI</a></li>
+          <li><a href="$">COUR</a></li>
+          <li><a href="$">CONTACT</a></li>
+          <li><a href="$">CONNEXION</a></li>
+        </ul>
+      </div>
+      <img src="{{ asset('image/menu.png') }}" alt="menu-dance" class="menu-dance">
+    </nav>
+  </body>
+
+  <script>
+    const menudance = document.querySelector(".menu-dance");
+    const navlinks = document.querySelector(".nav-links");
+
+    menudance.addEventListener('click',()=>{
+      navlinks.classList.toggle('mobile-menu');
+    })
+  </script>
+</html>
+
+{% endblock %}
