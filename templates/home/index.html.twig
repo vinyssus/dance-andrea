@@ -5,20 +5,32 @@
   <head>
     <meta charset="UTF-8" />
     {% block stylesheets %}{% endblock %}
-    <link rel="stylesheet"  href="{{ asset('css/Home.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/Home.css') }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
-      <a href="*" class="logo">AZA-ANDREA</a>
+      <div><a href="*" class="logo">AZA-ANDREA</a></div>
       <div class="nav-links">
         <ul>
-          <li class="active"><a  href="$">A PROPOS DE MOI</a></li>
-          <li><a href="$">COUR</a></li>
+          <li class="active"><a href="$">A PROPOS DE MOI</a></li>
+          <li><a href="$">COURS</a></li>
           <li><a href="$">CONTACT</a></li>
           <li><a href="$">CONNEXION</a></li>
         </ul>
       </div>
-      <img src="{{ asset('image/menu.png') }}" alt="menu-dance" class="menu-dance">
+      <div class="menu">
+        <img
+          src="{{ asset('image/menu.png') }}"
+          alt="menu-dance"
+          class="menu-dance"
+        />
+      </div>
     </nav>
   </body>
 
@@ -26,9 +38,9 @@
     const menudance = document.querySelector(".menu-dance");
     const navlinks = document.querySelector(".nav-links");
 
-    menudance.addEventListener('click',()=>{
-      navlinks.classList.toggle('mobile-menu');
-    })
+    menudance.addEventListener("click", () => {
+      navlinks.classList.toggle("mobile-menu");
+    });
   </script>
 </html>
 

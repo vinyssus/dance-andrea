@@ -3,73 +3,75 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body{
    
-    background-image: url("/image/aza1.jpg");
-    background-size: auto;
-    background-repeat: repeat;
+    /* background-image: url("/image/aza1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
    
 }
 
 .navbar{
-    position: absolute;
-    padding: 50px;
+    position: sticky;
+    padding: 1.3em;
     display: flex ;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    box-sizing: border-box;
+    height: 5em;
+    border-bottom: 1px solid #ccc;
 }
 
-.navbar a {
-    color: black;
-    font-weight: bold;
+.navbar .nav-links  {
+    width: 50%;
+    z-index: 2;
 }
+.navbar .nav-links ul {
+    display:flex ;
+    justify-content: space-evenly;
+}
+
+
+.navbar a {
+    color: #333;
+    font-weight: bold;
+} 
 
 .navbar .logo {
     font-size: 2em;
+    flex: 1;
+    padding-left: 1.5em;
+    z-index: 5;
 }
 
-.navbar .nav-links ul {
-    display:flex ;
-}
 
-
-.navbar .nav-links ul li{
-    display:flex ;
-    margin: 0 30px;
-}
-
-.navbar .nav-links ul li.active a{
-    display:flex ;
-    margin: 0 30px;
-    color: red;
-}
-
-.navbar .menu-dance {
+.navbar .menu{
     display: none;
-    position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 35px;
+    
+} 
+.navbar .menu .menu-dance{
+    width: 1.5em;
+    height: 1.5em;
 }
 
-@media screen and (max-width:900px) {
-
-    .navbar .logo {
-        font-size: 2em;
-        position: absolute;
-        top: 50px;
-        left: 50px;
+@media (max-width:900px) {
+    .navbar {
+        z-index: 5000;
     }
 
-    .navbar .menu-dance{
+    .navbar .menu{
         display: block;
+        cursor: pointer;
+        padding-right: 1em;
     }
 
     .nav-links {
+        z-index: 2;
        top: 0;
        left: 0;
        position: absolute;
@@ -92,6 +94,7 @@ body{
 
     .nav-links.mobile-menu {
         margin-left: 0;
+        z-index: 2;
     }
 
     .navbar {
@@ -104,4 +107,5 @@ body{
     }
     
 }
+
 
