@@ -42,12 +42,17 @@ body{
     font-weight: bold;
 } 
 
+li a:hover{
+    color: red;
+}
+
 .navbar .logo {
     font-size: 2em;
     flex: 1;
     padding-left: 1.5em;
     z-index: 5;
 }
+
 
 
 .navbar .menu{
@@ -59,7 +64,7 @@ body{
     height: 1.5em;
 }
 
-@media (max-width:900px) {
+@media screen and (max-width:900px) {
     .navbar {
         z-index: 5000;
     }
@@ -70,9 +75,11 @@ body{
         padding-right: 1em;
     }
 
+   
+
     .nav-links {
         z-index: 2;
-       top: 0;
+       top: 5em;
        left: 0;
        position: absolute;
        background-color: rgba(255, 255, 255, 0.20);
@@ -108,4 +115,38 @@ body{
     
 }
 
+.container {
+    text-align: center;
+}
 
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-top: 290px;
+    padding: 0.7em;
+    text-align: center;
+ }
+
+ .btn--primary {
+    background: dodgerblue;
+    color: black;
+ }
+
+ .btn--primary:hover {
+    background: rgb(106, 168, 231);
+ }
+
+ /* @media screen and (min-width:1024px) {
+    .btn {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        border: 1px solid;
+        border-radius: 15px;
+        margin-top: 290px;
+        text-align: center;
+     }
+ } */
